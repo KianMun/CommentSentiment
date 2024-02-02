@@ -1,26 +1,72 @@
 # Sentiment Classifcation
 ## Deployed on Flask Server
-1.  Navigate where the python file ```commentSentimentServer.py``` is.
-2.  Run ```python commentSentimentServer.py``` on terminal.
-3.  API is deployed on ```http://127.0.0.1:5000/sentiments```.
+1.  Navigate where the python file ```keywordsServer.py``` is.
+2.  Run ```python keywordsServer.py``` on terminal.
+3.  API is deployed on ```http://127.0.0.1:5000/keywords```.
 4.  Test using postman.
 5.  GET REQUEST JSON format:
    
-    ```Negative Sentiment:```
+    ```Example 1:```
 
-    {"text":"when I tried to register to go on doctors list I was told I am not in the catchment area but on the NHS website it can be possible to be out of area despite I am only living 1 mile away. The area is convenient for me as I attend the dental services. Is this service selective and biased."}
-
-    {"text": "I have been ringing for 2 days trying to sort out my medication which was due 2 days ago and is predated and one member of staff has been repeatedly rude to me Refusing to listen to me I am now without medication i really need."}
-
-    {"text": "It is very hard to get an appointment on the phone even if you call at 08:30"}
-
-    ```Positve Sentiment:```
-
-    {"text": "I've been using this surgery for the past four years and found they have always done their best"}
+    {"text": "Yes its very hard to get an appointment but once I spoke to a doctor I was super impressed with the empathy and clinical expertise. I was not rushed through the appointment"}
     
+    Top 10 Keywords Response:
+
+    {
+        "Top 10 Keywords": [
+            "expertise",
+            "super",
+            "clinical",
+            "yes",
+            "rushed",
+            "empathy",
+            "impressed",
+            "hard",
+            "spoke",
+            "appointment"
+        ]
+    }
+
+    ```Example 2:```
+
     {"text": "I have always found the receptionist helpful, my experience of the doctors I have seen have been caring ,understanding & professional."}
     
-    {"text": "We have had over 6 weeks of our three children being poorly with general childhood illness’. Each time we’ve asked to see a dr the receptionists have been helpful and accommodating and the Drs and Nurses we have seen have been thorough and reassuring. We really appreciate the service from your whole team. Thank you"}
+    Top 10 Keywords Response:
 
+    {
+    "Top 10 Keywords": [
+        "understanding",
+        "found",
+        "caring",
+        "professional",
+        "seen",
+        "experience",
+        "always",
+        "helpful",
+        "receptionist",
+        "doctor"
+        ]
+    }
 
-7. Results will retun as JSON object ```{"Sentiment": "Positive}``` or ```{"Sentiment": "Negative}```
+    ```Example 3: If comment too short, not enough keywords, will return "" ```
+
+   {"text": "Unfortunately this practice never has appointment! They don’t support or help and just ignore"}
+
+    
+    Top 10 Keywords Response:
+    
+    {
+        "Top 10 Keywords": [
+            "ignore",
+            "unfortunately",
+            "support",
+            "never",
+            "help",
+            "practice",
+            "appointment",
+            "",
+            "",
+            ""
+        ]
+    }
+
