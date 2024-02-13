@@ -70,3 +70,4 @@
         ]
     }
 
+6. Model is deployed on Azure: ```https://keywordsserver.azurewebsites.net/keywords```
