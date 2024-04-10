@@ -70,4 +70,4 @@
         ]
     }
 
-6. Model is deployed on Azure: ```https://keywordsserver.azurewebsites.net/keywords```
+6. ~~Model is deployed on Azure: ```https://keywordsserver.azurewebsites.net/keywords```~~ Server no longer available
