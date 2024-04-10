@@ -1,4 +1,4 @@
-# Sentiment Classifcation
+# Keyword Extraction from Comments
 ## Deployed on Flask Server
 1.  Navigate where the python file ```keywordsServer.py``` is.
 2.  Run ```python keywordsServer.py``` on terminal.
